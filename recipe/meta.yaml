@@ -1,4 +1,4 @@
-{% set version = '0.1.0' %}
+{% set version = "0.1.0" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -14,7 +14,7 @@ source:
   sha256: 0204d5fb273371220f93d2c8af62220b4c21b854759c3cefeb6851f1699162fc
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -36,8 +36,7 @@ test:
 about:
   home: https://github.com/ropenscilabs/rnaturalearthdata
   license: CC0-1.0
-  summary: Vector map data from <http://www.naturalearthdata.com/>. Access functions are provided
-    in the accompanying package 'rnaturalearth'.
+  summary: Vector map data from <http://www.naturalearthdata.com/>. Access functions are provided in the accompanying package 'rnaturalearth'.
   license_family: CC
 
 extra:
