@@ -1,5 +1,4 @@
 {% set version = "1.0.0" %}
-{% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-rnaturalearthdata
@@ -12,6 +11,7 @@ source:
   sha256: e1fefaf1ea575fe242402c933b531c90f0f18772f8efe47b97a221b7eefb1e4d
 
 build:
+  noarch: generic
   number: 1
   rpaths:
     - lib/R/lib/
@@ -27,8 +27,7 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('rnaturalearthdata')"  # [not win]
-    - "\"%R%\" -e \"library('rnaturalearthdata')\""  # [win]
+    - $R -e "library('rnaturalearthdata')"
 
 about:
   home: https://github.com/ropenscilabs/rnaturalearthdata
